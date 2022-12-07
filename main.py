@@ -88,8 +88,10 @@ class Crawler:
                     try:
                         self.crawl_filme(url)
                     except:
-                        print(url)
+                        print(f' err on url: {url}')
                 self.linha += 1
+                if self.linha > 15:
+                    break
 
 if __name__ == '__main__':
     Crawler(urls=['https://www.imdb.com/chart/top/?ref_=nv_mv_250']).run()
